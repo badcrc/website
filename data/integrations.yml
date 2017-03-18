@@ -1,6 +1,6 @@
 integration:
     meetup_group_name:       "elcomite"
     medium_publication_name: "elcomite"
-    social_media:
-        twitter: https://twitter.com/elcomite
-        mail: info@elcomite.bio
+social_media:
+    twitter: https://twitter.com/elcomite
+    mail: info@elcomite.bio
