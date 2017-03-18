@@ -1,8 +1,4 @@
 0: 
-      source: instagram
-      user : asiermarques
-      url : https://instagram.com/p/BQDAT0Gj7VE/media/?size=l
-1:
-      source: instagram
-      user : steviesara
-      url : https://www.instagram.com/p/BRxq8RihL5g/media/?size=l
+      source: flickr
+      user_src: https://www.flickr.com/photos/emubla/
+      url: https://c2.staticflickr.com/6/5252/5525408923_26f8dc9833_b.jpg
