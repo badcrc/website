@@ -27,4 +27,16 @@ class Event
 
     public $place_address;
 
+
+    function toJson()
+    {
+        $item = clone $this;
+
+
+        $item->datetime = $this->datetime->format(\DateTime::ISO8601);
+        $item->description = substr($this->description,0,240)."...";
+
+        return json_encode($item);
+    }
+
 }
