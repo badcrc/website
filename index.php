@@ -7,8 +7,12 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-//$event_service = new \ElComite\Service\MeetupService("elcomite");
-//$event_service->getLastEvent();
+$site = new \ElComite\Website();
 
-$medium = new \ElComite\Service\MediumService("elcomite", new \Vinelab\Rss\Rss());
-$medium->getLastPosts();
+include __DIR__ . "/config/services.php";
+
+$medium_posts = $site["articles"]->getLastPosts();
+$events       = $site["events"]->getLastEvent();
+$sponsors     = $site["config"]->getSponsors();
+$hero_images  = $site["config"]->getHeroImages();
+

@@ -31,8 +31,6 @@ class MeetupService
         if($raw_data)
         {
             $item = $this->parseRawResponse($raw_data);
-
-            die(json_encode($item));
             return $item;
         }
 
