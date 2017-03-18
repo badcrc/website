@@ -1,18 +1,22 @@
 <template>
   <div id="app">
 
-    <header class="bg_primary">
+    <header class="bg_primary" v-bind:style="{ 'background-image': 'url(' + main_image.url + ')' }">
 
-      <div class="container">
 
-        <div class="column row text-center">
-          <img src="/assets/img/logo.png" alt="elComité">
-          <h1 class="sans_font">Creando una escena de desarrollo tecnológico en Bilbao</h1>
+      <div class="contrast_layer"></div>
+      <div class="claim">
+        <div class="container">
+
+          <div class="column row text-center">
+            <img src="/assets/img/logo.png" alt="elComité">
+            <h1 class="sans_font">Somos una comunidad de creadores que nos juntamos para crear proyectos en Bilbao.</h1>
+
+          </div>
+
+
 
         </div>
-
-
-
       </div>
 
     </header>
@@ -20,17 +24,24 @@
     <section class="bg_primary">
 
         <div class="container">
-          <div class="row column">
+          <div class="row ">
 
-            <article class="text-center event">
-              <div class="media-object">
-                <div class="media-object-section">
-                  <h3>Próximo evento: {{last_event.datetime|moment}}</h3>
-                  <p>{{last_event.description}}</p>
-                  <a v-bind:href="last_event.url" class="button large">Únete</a>
+            <div class="column medium-7">
+              <article class="event">
+                <div class="media-object">
+                  <div class="media-object-section">
+                    <h3>{{last_event.datetime|moment}}</h3>
+                    <p>{{last_event.description}}</p>
+
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </div>
+            <div class="column medium-4 medium-offset-1">
+              <a v-bind:href="last_event.url" class="button large expanded">Apúntate en nuestro Meetup</a>
+            </div>
+
+
 
           </div>
         </div>
@@ -50,7 +61,7 @@
         <div class="row">
 
 
-          <div v-for="item in articles" class="column medium-6 large-4">
+          <div v-for="item in articles" class="column large-4">
 
 
               <a v-bind:href="item.link" class="article text-center" >
@@ -126,10 +137,14 @@ export default {
         }
     },
     data: function () {
+
+        var images = window.hero_images.sort( function() { return 0.5 - Math.random() } );
+
         return {
             last_event: window.last_event,
             articles: window.last_articles,
-            sponsors: window.sponsors
+            sponsors: window.sponsors,
+            main_image: images[0]
         };
     },
     components: {

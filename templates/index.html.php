@@ -24,6 +24,8 @@
 
     var sponsors = <?php echo json_encode($sponsors) ?>;
 
+    var hero_images = <?php echo json_encode($hero_images) ?>;
+
 </script>
 
 <script type="text/javascript"
