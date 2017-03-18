@@ -13,7 +13,7 @@
 
           <div class="column row text-center">
             <div class="credit_cont">
-              <a v-bind:href="main_image.user_src" target="_blank" class="image_credits">crédito de imagen</a>
+              <a v-bind:href="main_image.user_src" target="_blank" class="image_credits">crédito de la imagen</a>
 
             </div>
             <img src="/assets/img/logo.png" alt="elComité">
