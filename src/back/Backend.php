@@ -11,7 +11,7 @@ namespace ElComite;
 use ElComite\Service\SiteConfigService;
 use Pimple\Container;
 
-class Website extends Container
+class Backend extends Container
 {
 
 

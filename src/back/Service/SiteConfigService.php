@@ -58,7 +58,7 @@ class SiteConfigService
 
     private function parseFile($file)
     {
-        $data = Yaml::parse(file_get_contents(__DIR__ . "/../../data/".$file));
+        $data = Yaml::parse(file_get_contents(__DIR__ . "/../../../data/".$file));
 
         return $data;
     }
