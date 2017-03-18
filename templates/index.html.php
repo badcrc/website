@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>elComité</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/dist/core.css">
     <link rel="stylesheet" href="/assets/dist/comp.css">
 </head>
@@ -25,6 +26,8 @@
     var sponsors = <?php echo json_encode($sponsors) ?>;
 
     var hero_images = <?php echo json_encode($hero_images) ?>;
+
+    var social_links = <?php echo json_encode($social_links) ?>
 
 </script>
 

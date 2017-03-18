@@ -14,6 +14,8 @@ class SiteConfigService
 {
 
 
+    private $integration_data;
+
 
 
     function getHeroImages()
@@ -47,12 +49,17 @@ class SiteConfigService
         return $config["meetup_group_name"];
     }
 
+    function getSocialLinks()
+    {
+        $integrations = $this->getIntegrations();
+        $config = $integrations["social_media"];
+        return $config;
+    }
+
     function getIntegrations()
     {
 
-        $items = $this->parseFile("integrations.yml");
-
-        return $items;
+        return $this->parseFile("integrations.yml");
     }
 
 

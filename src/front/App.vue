@@ -4,11 +4,18 @@
     <header class="bg_primary" v-bind:style="{ 'background-image': 'url(' + main_image.url + ')' }">
 
 
+
       <div class="contrast_layer"></div>
       <div class="claim">
+
         <div class="container">
 
+
           <div class="column row text-center">
+            <div class="credit_cont">
+              <a v-bind:href="main_image.user_src" target="_blank" class="image_credits">crédito de imagen</a>
+
+            </div>
             <img src="/assets/img/logo.png" alt="elComité">
             <h1 class="sans_font">Somos una comunidad de creadores que nos juntamos para crear proyectos en Bilbao.</h1>
 
@@ -30,7 +37,7 @@
               <article class="event">
                 <div class="media-object">
                   <div class="media-object-section">
-                    <h3>{{last_event.datetime|moment}}</h3>
+                    <h3><span class="fa fa-calendar"></span> {{last_event.datetime|moment}}</h3>
                     <p>{{last_event.description}}</p>
 
                   </div>
@@ -95,7 +102,7 @@
 
       <div class="container text-center">
 
-        <h4>Colaboran</h4>
+        <h4>Colaboran con nosotros</h4>
 
         <a v-for="item in sponsors"
            v-bind:href="item.url" class="sponsor">
@@ -113,9 +120,12 @@
       <div class="container">
         <div class="row">
           <div class="column medium-6">
-            elComité.bio
+            elComite.bio
           </div>
-          <div class="column medium-6">
+          <div class="column medium-6 text-right">
+
+            <a v-bind:href="social_links.twitter"><span class="fa fa-twitter icon-w"></span></a>
+            <a v-bind:href="social_links.mail"><span class="fa fa-envelope icon-w"></span></a>
 
           </div>
         </div>
@@ -133,7 +143,7 @@ export default {
     name: 'app',
     filters: {
         moment: function (date) {
-            return moment(date).format('DD.MM.YYYY hh:mm');
+            return moment(date).format('DD/MM/YYYY hh:mm');
         }
     },
     data: function () {
@@ -144,7 +154,8 @@ export default {
             last_event: window.last_event,
             articles: window.last_articles,
             sponsors: window.sponsors,
-            main_image: images[0]
+            main_image: images[0],
+            social_links: social_links
         };
     },
     components: {

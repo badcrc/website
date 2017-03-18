@@ -13,11 +13,12 @@ use ElComite\Entity\Event;
 class MeetupService
 {
 
-    private $url = "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname={group_name}&page=1";
+    private $url = "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname={group_name}&status=upcoming,past&page=1";
 
 
     function __construct($group_name)
     {
+
         $this->url = str_replace("{group_name}", $group_name, $this->url);
 
     }
@@ -28,6 +29,7 @@ class MeetupService
     function getLastEvent()
     {
         $raw_data = $this->makeGetRequest();
+
         if($raw_data)
         {
             $item = $this->parseRawResponse($raw_data);

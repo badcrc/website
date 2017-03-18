@@ -15,5 +15,6 @@ $medium_posts = $site["articles"]->getLastPosts();
 $last_event   = $site["events"]->getLastEvent();
 $sponsors     = $site["config"]->getSponsors();
 $hero_images  = $site["config"]->getHeroImages();
+$social_links = $site["config"]->getSocialLinks();
 
 include __DIR__ . "/templates/index.html.php";
