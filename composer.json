@@ -1,0 +1,11 @@
+{
+    "require": {
+        "symfony/yaml": "^3.2",
+        "vinelab/rss": "^1.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "ElComite\\": "src/"
+      }
+    }
+}
