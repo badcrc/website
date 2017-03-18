@@ -65,11 +65,12 @@ class MeetupService
                 $event_data = $data["results"][0];
 
                 $date = new \DateTime();
-                $date->setTimestamp($event_data["time"]);
+                $date->setTimestamp($event_data["time"]/1000);
+
 
                 $event = new Event();
                 $event->url          = $event_data["event_url"];
-                $event->description  = htmlentities($event_data["description"]);
+                $event->description  = strip_tags($event_data["description"]);
                 $event->guest_number = $event_data["yes_rsvp_count"];
                 $event->place_name   = $event_data["venue"]["name"];
                 $event->place_address = $event_data["venue"]["address_1"];

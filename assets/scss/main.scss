@@ -1,3 +1,98 @@
 @import 'settings';
 @import '../../node_modules/foundation-sites/assets/foundation';
 
+.bg_primary{
+  background: $bg_primary_color;
+  color: #fff;
+}
+
+.sans_font{
+  font-family: $body-font-family;
+}
+.serif_font{
+  font-family: $header-font-family;
+}
+
+
+header.bg_primary{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 36rem;
+  position: relative;
+
+  .contrast_layer{
+    background: $bg_primary_color_lighter;
+    opacity: .85;
+    min-height: 38rem;
+    padding: 2rem;
+    padding-bottom: 8rem;
+  }
+  .claim{
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+
+
+    img{
+      width: 200px;
+      height: auto;
+      margin: 1rem 0 4rem 0;
+    }
+    h1{
+      font-size: 2.8rem;
+    }
+  }
+}
+
+
+#app > section{
+  min-height: 200px;
+  padding: 4rem;
+}
+
+
+
+#articles{
+
+  h4{
+    margin-bottom: 2rem;
+  }
+  .article{
+    display: block;
+    .image{
+      height: 220px;
+      background: #ccc;
+      background-size: cover;
+
+    }
+    h5{
+      margin-top: .6rem;
+      color: $bg_primary_color;
+      font-size: 1.2rem;
+    }
+    button{
+      margin-top: .6rem;
+
+    }
+  }
+}
+
+#sponsors
+{
+  padding-top: 0!important;
+  h4{
+    margin-bottom: 1.2rem;
+  }
+  .sponsor{
+    margin: 0 30px;
+    img{
+      height: 160px;
+      width: auto;
+    }
+  }
+}
+
+footer{
+  padding: 2rem 0;
+}
