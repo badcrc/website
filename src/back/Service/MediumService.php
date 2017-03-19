@@ -7,26 +7,48 @@
 
 namespace ElComite\Service;
 
+use Symfony\Component\Cache\Adapter\AdapterInterface;
+
 class MediumService
 {
 
-
+    const CACHE_KEY = "medium";
 
     private $url = "https://medium.com/feed/{publication_name}";
 
-    function __construct($publication_name)
+    /**
+     * @var AdapterInterface
+     */
+    private $cache;
+
+    function __construct($publication_name, AdapterInterface $cacheAdapter)
     {
+        $this->cache = $cacheAdapter;
         $this->url = str_replace("{publication_name}", $publication_name, $this->url);
     }
 
 
     function getLastPosts($limit=3)
     {
-        $raw = $this->makeGetRequest();
 
-        $items = $this->parseRawResponse($raw, $limit);
+        $postsCache = $this->cache->getItem(static::CACHE_KEY);
+        if(!$postsCache->isHit())
+        {
 
-        return $items;
+            $raw_data = $this->makeGetRequest();
+
+            if($raw_data)
+            {
+                $raw   = $this->makeGetRequest();
+                $items = $this->parseRawResponse($raw, $limit);
+
+                $postsCache->set($items);
+                $postsCache->expiresAfter(60*60);
+                $this->cache->save($postsCache);
+            }
+        }
+
+        return $postsCache->get();
 
     }
 
