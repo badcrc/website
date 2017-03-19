@@ -9,16 +9,23 @@ namespace ElComite\Service;
 
 
 use ElComite\Entity\Event;
+use Symfony\Component\Cache\Adapter\AdapterInterface;
 
 class MeetupService
 {
 
+    const CACHE_KEY = "meetup";
+
     private $url = "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname={group_name}&status=upcoming,past&page=1&desc=true";
 
+    /**
+     * @var AdapterInterface
+     */
+    private $cache;
 
-    function __construct($group_name)
+    function __construct($group_name, AdapterInterface $cacheAdapter)
     {
-
+        $this->cache = $cacheAdapter;
         $this->url = str_replace("{group_name}", $group_name, $this->url);
     }
 
@@ -27,15 +34,23 @@ class MeetupService
      */
     function getLastEvent()
     {
-        $raw_data = $this->makeGetRequest();
 
-        if($raw_data)
+        $lastEventCache = $this->cache->getItem(static::CACHE_KEY);
+        if(!$lastEventCache->isHit())
         {
-            $item = $this->parseRawResponse($raw_data);
-            return $item;
+
+            $raw_data = $this->makeGetRequest();
+
+            if($raw_data)
+            {
+                $item = $this->parseRawResponse($raw_data);
+                $lastEventCache->set($item);
+                $lastEventCache->expiresAfter(60*60);
+                $this->cache->save($lastEventCache);
+            }
         }
 
-        return null;
+        return $lastEventCache->get();
     }
 
     private function makeGetRequest()

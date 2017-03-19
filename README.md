@@ -1,9 +1,42 @@
-# website
+# Our Community Website
 
-> A Vue.js project
+## Technology stack:
 
-## Build Setup
+- PHP with some components
+- Vue2 and webpack
+- Zurb Foundation 3
 
-### WebPack build
+## Setup
+
+### Install php dependencies
+
+    composer install
+    
+### Install js dependencies
+
+    npm install
+
+### Assets build
 
     ./node_modules/webpack/bin/webpack.js --config config/webpack.config.js 
+    
+### Set write permissions to the cache directory
+
+    chmod -R 777 var/cache
+    
+    
+## Configuration files
+
+All files are written in YAML format:
+
+**Background image**
+
+  /data/heros.yml
+  
+**Medium, Meetup and social links**
+
+  /data/integrations.yml
+  
+**Sponsors**
+
+  /data/sponsors.yml
