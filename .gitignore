@@ -2,5 +2,5 @@
 node_modules/
 dist
 vendor
-var/
-!var/cache/.gitempty
+var/cache/*
+!.gitempty
