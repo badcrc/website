@@ -1,15 +1,15 @@
 var ManifestPlugin    = require('webpack-manifest-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack           = require("webpack");
-const extractCSSVue = new ExtractTextPlugin('/comp.css');
-const extractCSS    = new ExtractTextPlugin('/core.css');
+const extractCSSVue = new ExtractTextPlugin('/css/comp.css');
+const extractCSS    = new ExtractTextPlugin('/css/core.css');
 
 module.exports = {
     entry: {
         app: [__dirname + '/../src/front/main.js', __dirname + '/../assets/scss/main.scss'],
     },
     output: {
-        filename: "bundle.js",
+        filename: "js/bundle.js",
         path: __dirname + '/../assets/dist',
         publicPath: '/'
     },
@@ -35,12 +35,24 @@ module.exports = {
                     use: "css-loader"
                 })
             },{
-                test: /\.(sass|scss)$/,
-                loader: extractCSS.extract(['css-loader', 'sass-loader'])
+                test: /\.scss$/,
+                use: extractCSS.extract({
+                    use: [{
+                        loader: "css-loader"
+                    }, {
+                        loader: "sass-loader"
+                    }],
+                    fallback: "style-loader"
+                })
             },
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
                 loader: 'raw-loader'
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: '/node_modules/'
             }
         ]
     },

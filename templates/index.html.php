@@ -5,8 +5,8 @@
     <title>elComité</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/dist/core.css">
-    <link rel="stylesheet" href="/assets/dist/comp.css">
+    <link rel="stylesheet" href="/assets/dist/css/core.css">
+    <link rel="stylesheet" href="/assets/dist/css/comp.css">
 </head>
 <body>
 <div id="app">
@@ -32,6 +32,6 @@
 </script>
 
 <script type="text/javascript"
-        src="/assets/dist/bundle.js"></script>
+        src="/assets/dist/js/bundle.js"></script>
 </body>
 </html>

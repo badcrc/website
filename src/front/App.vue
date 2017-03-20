@@ -136,7 +136,6 @@
 </template>
 
 <script>
-import Hello from './components/Hello.vue';
 import moment from 'moment';
 
 export default {
@@ -148,7 +147,7 @@ export default {
     },
     data: function () {
 
-        var images = window.hero_images.sort( function() { return 0.5 - Math.random() } );
+        const images = window.hero_images.sort( function() { return 0.5 - Math.random() } );
 
         return {
             last_event: window.last_event,
@@ -159,10 +158,8 @@ export default {
         };
     },
     components: {
-      Hello
+
     }
 }
 </script>
 
-<style>
-</style>

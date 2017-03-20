@@ -20,6 +20,10 @@
 
     ./node_modules/webpack/bin/webpack.js --config config/webpack.config.js 
     
+**You can minimize your assets with the --optimize-minimize option**
+    
+    ./node_modules/webpack/bin/webpack.js --config config/webpack.config.js --optimize-minimize
+    
 ### Set write permissions to the cache directory
 
     chmod -R 777 var/cache
