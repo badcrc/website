@@ -2,5 +2,8 @@
 node_modules/
 dist
 vendor
-var/cache/*
+/composer.lock
+/var/cache/*
 !.gitempty
+var/cache/*
+/var
