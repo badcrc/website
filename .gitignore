@@ -5,5 +5,3 @@ vendor
 /composer.lock
 /var/cache/*
 !.gitempty
-var/cache/*
-/var
