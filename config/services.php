@@ -12,11 +12,17 @@ $site["config"] = function ()
 
 $site["articles"] = function ($c)
 {
+    if(!$c["config"]->getMediumPublicationName())
+        return null;
+
     return new \ElComite\Service\MediumService($c["config"]->getMediumPublicationName(), $c["cache"]);
 };
 
 $site["events"] = function ($c)
 {
+    if(!$c["config"]->getMeetupGroupName())
+        return null;
+
     return new \ElComite\Service\MeetupService($c["config"]->getMeetupGroupName(), $c["cache"]);
 };
 

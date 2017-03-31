@@ -77,10 +77,15 @@ class MediumService
     private function parseRawResponse($raw, $limit=3)
     {
 
+        $items = [];
+
+        if(!$raw)
+            return $items;
+
         $rss = simplexml_load_string($raw);
 
         $i=0;
-        $items = [];
+
         foreach ($rss->channel->item as $article) {
 
             if(++$i>$limit)

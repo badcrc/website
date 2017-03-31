@@ -18,13 +18,13 @@ header.bg_primary{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 36rem;
+  height: 34rem;
   position: relative;
 
   .contrast_layer{
     background: $bg_primary_color_lighter;
     opacity: .8;
-    min-height: 38rem;
+    height: 34rem;
     padding: 2rem;
     padding-bottom: 8rem;
   }
@@ -40,7 +40,7 @@ header.bg_primary{
         font-size: .8rem;
         color: #fff;
         right: 0;
-        top: 0;
+        top: -1rem;
         opacity: .8;
 
       }
@@ -56,8 +56,29 @@ header.bg_primary{
       margin: 1rem 0 4rem 0;
     }
     h1{
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 40em) {
+  header.bg_primary{
+    height: 38rem;
+
+    .contrast_layer{
+      height: 38rem;
+    }
+    .claim{
+      .credit_cont{
+        .image_credits
+        {
+          top: 0;
+        }
+      }
+      h1{
+        font-size: 4rem;
+        line-height: 4rem;
+      }
     }
   }
 }
@@ -73,7 +94,7 @@ header.bg_primary{
 
 #app > section{
   min-height: 200px;
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 
@@ -85,6 +106,7 @@ header.bg_primary{
   }
   .article{
     display: block;
+    margin-bottom: 1.2rem;
     .image{
       height: 220px;
       background: #ccc;
@@ -107,17 +129,33 @@ header.bg_primary{
   }
 }
 
+
 #sponsors
 {
-  padding-top: 0!important;
   h4{
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
   .sponsor{
-    margin: 0 30px;
+    display: block;
+    margin-bottom: 1.2rem;
     img{
       height: 160px;
       width: auto;
+    }
+  }
+}
+@media screen and (min-width: 40em) {
+  #sponsors
+  {
+    .sponsor{
+      display: inline-block;
+      margin: 0 0.5rem;
+      margin-bottom: 1.2rem;
+
+      img{
+        height: 160px;
+        width: auto;
+      }
     }
   }
 }

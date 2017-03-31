@@ -28,7 +28,7 @@
 
     </header>
 
-    <section class="bg_primary">
+    <section class="bg_primary" v-if="last_event">
 
         <div class="container">
           <div class="row ">
@@ -56,16 +56,17 @@
 
     </section>
 
-    <section id="articles">
+    <section id="articles" v-if="articles.length">
 
-      <div class="container">
+      <div class="container" >
 
 
         <div class="row column">
           <h4>En nuestro <a href="http://medium.com/elcomite">Medium</a></h4>
         </div>
 
-        <div class="row">
+        <div class="row" >
+
 
 
           <div v-for="item in articles" class="column large-4">
@@ -97,7 +98,7 @@
 
     </section>
 
-    <section id="sponsors">
+    <section id="sponsors"  v-if="sponsors.length">
 
 
       <div class="container text-center">
@@ -119,10 +120,10 @@
 
       <div class="container">
         <div class="row">
-          <div class="column medium-6">
+          <div class="column small-6">
             elComite.bio
           </div>
-          <div class="column medium-6 text-right">
+          <div class="column small-6 text-right">
 
             <a v-bind:href="social_links.twitter"><span class="fa fa-twitter icon-w"></span></a>
             <a v-bind:href="social_links.mail"><span class="fa fa-envelope icon-w"></span></a>

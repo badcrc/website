@@ -13,15 +13,10 @@ use Symfony\Component\Yaml\Yaml;
 class SiteConfigService
 {
 
-
-    private $integration_data;
-
-
-
     function getHeroImages()
     {
 
-        $items = $this->parseFile("heros.yml");
+        $items = $this->parseFile("data_heros.yml");
 
         return $items;
     }
@@ -29,7 +24,7 @@ class SiteConfigService
     function getSponsors()
     {
 
-        $items = $this->parseFile("sponsors.yml");
+        $items = $this->parseFile("data_sponsors.yml");
 
         return $items;
     }
@@ -37,35 +32,33 @@ class SiteConfigService
 
     function getMediumPublicationName()
     {
-        $integrations = $this->getIntegrations();
-        $config = $integrations["integration"];
-        return $config["medium_publication_name"];
+        $config = $this->getIntegrations();
+        return isset($config["medium_publication_name"]) ?
+                        $config["medium_publication_name"] : null;
     }
 
     function getMeetupGroupName()
     {
-        $integrations = $this->getIntegrations();
-        $config = $integrations["integration"];
-        return $config["meetup_group_name"];
+        $config = $this->getIntegrations();
+        return isset($config["meetup_group_name"]) ?
+                        $config["meetup_group_name"] : null;;
     }
 
     function getSocialLinks()
     {
-        $integrations = $this->getIntegrations();
-        $config = $integrations["social_media"];
-        return $config;
+        $links = $this->parseFile("data_social_links.yml");
+        return $links;
     }
 
     function getIntegrations()
     {
-
-        return $this->parseFile("integrations.yml");
+        return $this->parseFile("data_integrations.yml");
     }
 
 
     private function parseFile($file)
     {
-        $data = Yaml::parse(file_get_contents(__DIR__ . "/../../../data/".$file));
+        $data = Yaml::parse(file_get_contents(__DIR__ . "/../../../config/".$file));
 
         return $data;
     }

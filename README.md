@@ -35,12 +35,16 @@ All files are written in YAML format:
 
 **Background image**
 
-  /data/heros.yml
+  /config/data_heros.yml
   
-**Medium, Meetup and social links**
+**Medium, Meetup**
 
-  /data/integrations.yml
+  /config/data_integrations.yml
+  
+**Social links**
+
+  /config/data_social_links.yml
   
 **Sponsors**
 
-  /data/sponsors.yml
+  /config/data_sponsors.yml

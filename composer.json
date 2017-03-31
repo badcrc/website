@@ -6,7 +6,11 @@
     },
     "autoload": {
       "psr-4": {
-        "ElComite\\": "src/back"
+        "ElComite\\": "src/back",
+        "ElComite\\Test": "tests/back"
       }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
     }
 }
