@@ -29,6 +29,21 @@ class SiteConfigService
         return $items;
     }
 
+    function getSocialLinks()
+    {
+        $links = $this->parseFile("data_social_links.yml");
+        return $links;
+    }
+
+    function getIntegrations()
+    {
+        return $this->parseFile("data_integrations.yml");
+    }
+
+    function getOnboardProjects()
+    {
+        return $this->parseFile("data_onboard_projects.yml");
+    }
 
     function getMediumPublicationName()
     {
@@ -43,18 +58,6 @@ class SiteConfigService
         return isset($config["meetup_group_name"]) ?
                         $config["meetup_group_name"] : null;;
     }
-
-    function getSocialLinks()
-    {
-        $links = $this->parseFile("data_social_links.yml");
-        return $links;
-    }
-
-    function getIntegrations()
-    {
-        return $this->parseFile("data_integrations.yml");
-    }
-
 
     private function parseFile($file)
     {
