@@ -13,6 +13,10 @@
   font-family: $header-font-family;
 }
 
+.secondary_subtitle{
+  color:#666;
+}
+
 
 header.bg_primary{
   background-size: cover;
@@ -111,14 +115,25 @@ header.bg_primary{
       height: 220px;
       background: #ccc;
       background-size: cover;
+      position: relative;
+      margin-bottom: 1rem;
+      h5{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #1779ba;
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        padding: .5rem 0;
+        color: #fff;
+      }
+    }
+    p{
+      font-size: 1rem;
+      color: #444;
+    }
 
-    }
-    h5{
-      margin-top: .6rem;
-      color: $bg_primary_color;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
     button{
       margin-top: .6rem;
 
@@ -130,6 +145,7 @@ header.bg_primary{
 }
 
 #onboard-projects {
+  background: #eee;
   h4 {
     margin-bottom: 1rem;
   }
@@ -144,14 +160,18 @@ header.bg_primary{
 }
 
 @media screen and (min-width: 40em) {
+
   #onboard-projects {
     .onboard-project {
-      display: inline-block;
-      margin: 0 0.5rem;
-      margin-bottom: 1.2rem;
-      img {
-        height: 100px;
-        width: auto;
+      margin: 4rem 0;
+      h5{
+        color: $bg_primary_color;
+      }
+      .author{
+        font-size: 0.9rem;
+        a{
+          margin-left: 0.5rem;
+        }
       }
     }
   }

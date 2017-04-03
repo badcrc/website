@@ -67,18 +67,33 @@
 
     <section id="onboard-projects"  v-if="onboard_projects.length">
       <div class="container">
-        <div class="row column">
-          <h4>En anteriores comités, se ha trabajado en:</h4>
-        </div>      
         <div class="row">
-          <div v-for="proj in onboard_projects" class="column large-4">
-            <a v-bind:href="proj.url" class="onboard-project text-center">
-              <img v-if="proj.logo.length" v-bind:src="proj.logo" height="50" width="50s"/>
-              <h5 class="sans_font" v-else="proj.logo.length">{{proj.name}}</h5>
-            </a>
-            <p>{{proj.description}}</p>
-            <button class="button secondary" v-if="proj.cvs.length">Ver el repositorio</button>            
-          </div>         
+
+          <div class="column large-8">
+
+            <h4>Proyectos que han pasado por elComité</h4>
+            <p class="secondary_subtitle">Estos son algunos de los proyectos en los que las personas de nuestra comunidad han estado trabajando durante nuestros encuentros.</p>
+
+            <div v-for="proj in onboard_projects" class="onboard-project">
+              <a v-bind:href="proj.url" >
+                <h5 class="sans_font">{{proj.name}}</h5>
+                <p>{{proj.description}}</p>
+              </a>
+              <p class="repo" v-if="proj.cvs"><a v-bind:href="proj.cvs"><span class="fa fa-github"></span> ver repositorio</a></p>
+              <div>
+                <strong class="author_title">Autores:</strong>
+                <div class="row medium-up-2">
+                  <div v-for="author in proj.authors" class="author column">
+                    {{author.name}}
+                    <a v-if="author.twitter" v-bind:href="author.twitter"><span class="fa fa-twitter"></span></a>
+                    <a v-if="author.linkedin" v-bind:href="author.linkedin"><span class="fa fa-linkedin"></span></a>
+                    <a v-if="author.github" v-bind:href="author.github"><span class="fa fa-github"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
