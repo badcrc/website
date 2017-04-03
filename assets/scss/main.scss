@@ -18,13 +18,13 @@ header.bg_primary{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 37rem;
+  height: 34rem;
   position: relative;
 
   .contrast_layer{
     background: $bg_primary_color_lighter;
     opacity: .8;
-    height: 37rem;
+    height: 34rem;
     padding: 2rem;
     padding-bottom: 8rem;
   }
@@ -56,14 +56,12 @@ header.bg_primary{
       margin: 1rem 0 4rem 0;
     }
     h1{
-      font-size: 3rem;
-      line-height: 2.8rem;
-      opacity: .8;
-      font-family: $header-font-family;
+      font-size: 2rem;
+      line-height: 2rem;
     }
   }
 }
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 40em) {
   header.bg_primary{
     height: 38rem;
 
@@ -79,8 +77,7 @@ header.bg_primary{
       }
       h1{
         font-size: 4rem;
-        line-height: 3.8rem;
-        opacity: 1;
+        line-height: 4rem;
       }
     }
   }
@@ -90,37 +87,8 @@ header.bg_primary{
   .fa{
     margin-right: 8px;
   }
-  h3{
-    text-align: center;
-    font-size: 2rem;
-  }
-  p{
-    text-align: center;
-    font-size: 1.2rem;
-  }
   .media-object-section:last-child:not(:nth-child(2)){
     padding-left: 0;
-  }
-
-}
-.event-cta {
-  text-align: center;
-  a.button{
-    margin-top: 1rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .event{
-    h3, p{
-      text-align: left;
-    }
-  }
-  .event-cta a.button{
-    margin-top: 0;
-    display: block;
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
   }
 }
 
@@ -140,30 +108,17 @@ header.bg_primary{
     display: block;
     margin-bottom: 1.2rem;
     .image{
-      height: 420px;
+      height: 220px;
       background: #ccc;
       background-size: cover;
-      background-position: center center;
-      position: relative;
-      margin-bottom: 1rem;
-      h5 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: $primary-color;
-        color: #fff;
-        margin-bottom: 0;
-        font-size: 2rem;
-        padding: 0.5rem 0;
-      }
-    }
 
-    p{
+    }
+    h5{
+      margin-top: .6rem;
+      color: $bg_primary_color;
       font-size: 1.2rem;
-      color: #333;
+      font-weight: bold;
     }
-
     button{
       margin-top: .6rem;
 
@@ -173,23 +128,34 @@ header.bg_primary{
     opacity: .8;
   }
 }
-@media screen and (min-width: 64em) {
-  #articles {
 
-    .article {
-      .image {
-        height: 220px;
-        h5{
-          font-size: 1.2rem;
-        }
-      }
-      p{
-        font-size: 1rem;
-      }
+#onboard-projects {
+  h4 {
+    margin-bottom: 1rem;
+  }
+  .onboard-project {
+    display: block;
+    margin-bottom: 1.2rem;
+    img {
+      height: 100px;
+      width: auto;
     }
   }
 }
 
+@media screen and (min-width: 40em) {
+  #onboard-projects {
+    .onboard-project {
+      display: inline-block;
+      margin: 0 0.5rem;
+      margin-bottom: 1.2rem;
+      img {
+        height: 100px;
+        width: auto;
+      }
+    }
+  }
+}
 
 #sponsors
 {
@@ -228,3 +194,6 @@ footer{
     margin-left: 1rem;
   }
 }
+
+
+

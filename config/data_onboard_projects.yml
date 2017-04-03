@@ -1,0 +1,9 @@
+0: 
+      name : 22talks
+      url : http://22talks.com
+      cvs: ''
+      description: "22talks is a simple backoffice software to mantain the info in an event (or all of them) 
+      your asociation manages.\n Using no more than 3 configuration steps, you can add/edit/delete all those
+       events and their related speakers (their talks contents etc), sponsors and so on.\n 
+       With all this data, we build your events landing page and launch it so anybody can attend."
+      logo: http://elcomite.bio/assets/img/logo.png
