@@ -17,7 +17,7 @@
 
             </div>
             <img src="/assets/img/logo.png" alt="elComité">
-            <h1 class="sans_font">Somos una comunidad de creadores que nos juntamos para crear proyectos en Bilbao.</h1>
+            <h1 class="sans_font">Organización de iniciativas en torno a la creación de proyectos en Bilbao.</h1>
 
           </div>
 
@@ -33,7 +33,7 @@
         <div class="container">
           <div class="row ">
 
-            <div class="column medium-7">
+            <div class="column large-7">
               <article class="event">
                 <div class="media-object">
                   <div class="media-object-section">
@@ -44,8 +44,8 @@
                 </div>
               </article>
             </div>
-            <div class="column medium-4 medium-offset-1">
-              <a v-bind:href="last_event.url" class="button large expanded">Apúntate en nuestro Meetup</a>
+            <div class="column event-cta large-4 large-offset-1">
+              <a v-bind:href="last_event.url" class="button large">Apúntate en nuestro Meetup</a>
             </div>
 
 
@@ -72,15 +72,17 @@
           <div v-for="item in articles" class="column large-4">
 
 
-              <a v-bind:href="item.link" class="article text-center" >
+              <a v-bind:href="item.url" class="article text-center" >
 
 
-                <div class="image" v-bind:style="{ 'background-image': 'url(' + item.image + ')' }"></div>
-                <h5 class="sans_font">{{item.title}}</h5>
+                <div class="image" v-bind:style="{ 'background-image': 'url(' + item.image + ')' }">
+                  <h5 class="sans_font">{{item.title}}</h5>
+                </div>
+
 
                 <p>{{item.description}}</p>
 
-                <button class="button secondary">Leer más</button>
+                <button class="button primary hollow">Leer más</button>
 
 
               </a>
