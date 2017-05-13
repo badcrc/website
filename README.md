@@ -33,6 +33,10 @@
 
 All files are written in YAML format:
 
+**Onboard projects** (projects crafted in #comite days)
+
+  /config/data_onboard_projects.yml
+
 **Background image**
 
   /config/data_heros.yml
