@@ -18,3 +18,11 @@
       authors:
          - {name: "Mario Nunes", twitter: "https://twitter.com/mariotux", linkedin: "https://www.linkedin.com/in/mario-nunes/", github: "https://github.com/mariotux"}
          - {name: "Asier Marqués", twitter: "https://twitter.com/asiermarques", linkedin: "https://www.linkedin.com/in/asier/", github: "https://github.com/asiermarques"}
+
+-
+      name : Molly
+      url : https://molly.sirikon.me
+      cvs: ''
+      description: "Minimalistic deployment tool for your applications. (Also cockles and mussels, alive, alive, oh!)"
+      authors:
+         - {name: "Carlos Fernández", twitter: "https://twitter.com/sirikon", linkedin: "https://www.linkedin.com/in/carlosfernandezllamas/", github: "https://github.com/Sirikon"}
