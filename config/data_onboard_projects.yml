@@ -34,3 +34,11 @@
       description: "An attempt to explain basic electric circuits concepts, without expensive or dangerous elements. Published on github Pages, and using Jekyll"
       authors:
          - {name: "Bingen Ortuzar", twitter: "https://twitter.com/bingen", linkedin: "https://www.linkedin.com/in/bingen/", github: "https://github.com/bingenortuzar"}
+
+-
+      name : GNOME Notes (aka Bijiben)
+      url : https://wiki.gnome.org/Apps/Bijiben
+      cvs: 'https://git.gnome.org//browse/bijiben/'
+      description: "Notes, formerly \"Bijiben\", is a note editor designed to remain simple to use."
+      authors:
+        - {name: "Iñigo Martínez", twitter: "https://twitter.com/martinezinigo", linkedin: "https://www.linkedin.com/in/martinezinigo/", github: "https://github.com/inigomartinez/"}
