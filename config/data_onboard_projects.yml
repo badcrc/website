@@ -50,3 +50,11 @@
       description: "Notes, formerly \"Bijiben\", is a note editor designed to remain simple to use."
       authors:
         - {name: "Iñigo Martínez", twitter: "https://twitter.com/martinezinigo", linkedin: "https://www.linkedin.com/in/martinezinigo/", github: "https://github.com/inigomartinez/"}
+
+-
+      name : La Cultureta
+      url : 'http://lacultureta.com'
+      cvs: 'https://github.com/ojoven/lacultureta'
+      description: "La Cultureta is a website where you can discover, in a Tinder like interface, the cultural events (concerts, theatres, expositions, etc.) of Donostia - San Sebastián"
+      authors:
+         - {name: "Mikel Torres", twitter: "https://twitter.com/ojoven", linkedin: "https://www.linkedin.com/in/mikeltorresugarte/", github: "https://github.com/ojoven"}
