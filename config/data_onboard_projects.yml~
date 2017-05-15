@@ -58,4 +58,3 @@
       description: "La Cultureta is a website where you can discover, in a Tinder like interface, the cultural events (concerts, theatres, expositions, etc.) of Donostia - San Sebastián"
       authors:
          - {name: "Mikel Torres", twitter: "https://twitter.com/ojoven", linkedin: "https://www.linkedin.com/in/mikeltorresugarte/", github: "https://github.com/ojoven"}
-         - {name: "Jon Díaz", twitter: "https://twitter.com/trankilo_majete", github: "https://github.com/jon-diaz"}
