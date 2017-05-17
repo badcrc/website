@@ -116,6 +116,7 @@
             elComite.bio
           </div>
           <div class="column small-6 text-right">
+            <a v-bind:href="social_links.github"><span class="fa fa-github icon-w"></span></a>
             <a v-bind:href="social_links.twitter"><span class="fa fa-twitter icon-w"></span></a>
             <a v-bind:href="social_links.mail"><span class="fa fa-envelope icon-w"></span></a>
           </div>
