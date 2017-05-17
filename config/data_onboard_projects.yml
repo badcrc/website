@@ -59,3 +59,11 @@
       authors:
          - {name: "Mikel Torres", twitter: "https://twitter.com/ojoven", linkedin: "https://www.linkedin.com/in/mikeltorresugarte/", github: "https://github.com/ojoven"}
          - {name: "Jon Díaz", twitter: "https://twitter.com/trankilo_majete", github: "https://github.com/jon-diaz"}
+
+-
+      name : Garagarduino
+      url : ''
+      cvs: 'https://github.com/badcrc/garagarduino'
+      description: "An Arduino powered beer fermentation control with MQTT support "
+      authors:
+         - {name: "Koldo Aingeru Marcos", twitter: "https://twitter.com/badcrc", linkedin: "https://www.linkedin.com/in/koldoaingerumarcos/", github: "https://github.com/badcrc"}
